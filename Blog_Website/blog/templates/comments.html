@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}
+Comments for {{ myposts.title }}
+{% endblock %}
+
+{% block content %}
+<h2>Comments:</h2>
+{% for comment in mycomments %}
+  <ul>
+    <li>
+      <p>{{ comment.user.username }} - {{ comment.date_posted }}:</p>
+      <p>[ {{ comment.content }} ]</p>
+    </li>
+  </ul>
+{% endfor %}
+{% endblock %}

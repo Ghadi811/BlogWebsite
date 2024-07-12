@@ -1,0 +1,83 @@
+<!-- master.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin-left: 1rem;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href=/>Home</a></li>
+                    <li><a href=users/>Users</a></li>
+                    <li><a href=blogs/>Blogs</a></li>
+                    <li><a href=comments/>Comments</a></li>
+                    <li><a href=categories/>Categories</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ {% block content %}
+{% endblock %}
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

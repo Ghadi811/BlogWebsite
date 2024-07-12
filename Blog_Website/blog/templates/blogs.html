@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}
+List of all Posts
+{% endblock %}
+
+{% block content %}
+
+
+<h1>Posts</h1>
+<ul>
+  {% for x in myposts %} <!--معرفينها بالفيو-->
+    <li><a href="blogdetails/{{x.id}}">{{ x.title }}</a></li>
+  {% endfor %}  <!--.#Django Tags..-->
+</ul>
+
+{% endblock %}

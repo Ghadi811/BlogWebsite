@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myposts.title }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ myposts.title }}</h1>
+
+  <p>{{ myposts.content }}</p>
+  <p>Category: {{ myposts.category.name }}</p>
+  <p>Date Published: {{ myposts.date_published }}</p>
+  <h3><a href="{% url 'comments' myposts.id %}">Comment</a></h3>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}
+List of all Users
+{% endblock %}
+
+{% block content %}
+
+
+<h1>Users</h1>
+<ul>
+  {% for x in myusers %} <!--معرفينها بالفيو-->
+    <li>{{ x.username }} {{ x.email }}</li>
+  {% endfor %}  <!--.#Django Tags..-->
+</ul>
+
+{% endblock %}
