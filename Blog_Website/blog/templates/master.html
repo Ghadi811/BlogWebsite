@@ -60,13 +60,13 @@
         <div class="container">
             <h1>My Blog</h1>
             <nav>
-                <ul>
-                    <li><a href=/>Home</a></li>
-                    <li><a href=users/>Users</a></li>
-                    <li><a href=blogs/>Blogs</a></li>
-                    <li><a href=comments/>Comments</a></li>
-                    <li><a href=categories/>Categories</a></li>
-                </ul>
+               <ul>
+    <li><a href="{% url 'main' %}">Home</a></li>
+    <li><a href="{% url 'users' %}">Users</a></li>
+    <li><a href="{% url 'blog' %}">Blogs</a></li>
+    <li><a href="{% url 'categories' %}">Categories</a></li>
+</ul>
+
             </nav>
         </div>
     </header>

@@ -8,7 +8,7 @@ Comments for {{ myposts.title }}
 {% for comment in mycomments %}
   <ul>
     <li>
-      <p>{{ comment.user.username }} - {{ comment.date_posted }}:</p>
+      <p>{{ comment.user.pk }}-{{ comment.user.username }} - {{ comment.date_posted }}:</p>
       <p>[ {{ comment.content }} ]</p>
     </li>
   </ul>
